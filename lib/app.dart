@@ -19,7 +19,7 @@ class TaskManagerAPp extends StatelessWidget {
         fontWeight: FontWeight.w600,
 
       )),
-      inputDecorationTheme: const InputDecorationTheme(
+      inputDecorationTheme:  InputDecorationTheme(
         filled: true,
         contentPadding: EdgeInsets.symmetric(horizontal: 16),
         fillColor: Colors.white,
@@ -36,7 +36,22 @@ class TaskManagerAPp extends StatelessWidget {
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide.none,
         ),
-      )),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.themeColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8)),
+            fixedSize: const Size.fromWidth(double.maxFinite),
+            padding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            foregroundColor: Colors.white,
+            textStyle: const TextStyle(
+                fontSize: 16
+            ),
+        ),
+      )
+      ),
       onGenerateRoute: (RouteSettings settings) {
         late Widget widget;
         if (settings.name == SplashScreen.name) {
